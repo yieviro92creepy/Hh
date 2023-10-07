@@ -1,5 +1,6 @@
 local blacklisted = {
     2787084537
+    2300178566
 }
  
 local blacklistReason = "You have been blacklisted from the game."
