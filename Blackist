@@ -1,0 +1,50 @@
+local LocalPlayer = game:GetService("Players").LocalPlayer
+local ScriptInput = script.Parent.Frame.RequireInput
+ 
+local function typewrite(text)
+    wait(1)
+    
+    for i=1,#text,1 do
+        ScriptInput.Text = string.sub(text,1,i)
+        wait(0.05)
+    end
+end
+ 
+local function typewriteLast(text)
+    
+    for i=1,#text,1 do
+        script.Parent.Blacklisted.TextLabel.Text = string.sub(text,1,i)
+        wait(0.05)
+    end
+end
+ 
+local function blacklist()
+    local sound = Instance.new("Sound")
+    sound.Parent = game.Workspace
+    sound.Playing = true
+    typewrite("Kid, guess what?")
+    wait(3)
+    typewrite("You're blacklisted.")
+    sound.SoundId = "rbxassetid://3069892996"
+    wait(3)
+    script.Parent.Blacklisted.Visible = true
+    typewriteLast("Lol get blacklisted!")
+    wait(3)
+    LocalPlayer:Kick("Yes, and you get kicked if you get blacklisted. Do not use this script again.")
+end
+ 
+if game.Players.LocalPlayer.Name == "Roblox" then
+    blacklist()
+end
+ 
+if game.Players.LocalPlayer.Name == "monokatze" then
+    blacklist()
+end
+ 
+if game.Players.LocalPlayer.Name == "eshaanopn" then
+    blacklist() -- lol I blacklisted myself just for a testing.
+end
+ 
+if game.Players.LocalPlayer.Name == "DontListenToMeHaha" then
+    blacklist()
+end
