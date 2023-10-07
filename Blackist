@@ -1,30 +1,13 @@
 local blacklisted = {
-	1
+    2787084537
 }
-
-local blacklistReason = "You are blacklisted from the script. If you believe this is a mistake go to discord.gg/9wRCptxC6u for assistance."
-
+ 
+local blacklistReason = "You have been blacklisted from the game."
+ 
 game.Players.PlayerAdded:Connect(function(player)
-	for i,v in pairs(blacklisted) do
-		if v == player.UserId then
-			player:Kick(blacklistReason)
-		end
-	end
-end)
-
---player.Name method
-local blacklisted = {
-	"eshaanopn"
-	"clone_nikita1"
-	"yieviro92creepy"
-}
-
-local blacklistReason = "You are blacklisted from the script. If you believe this is a mistake go to discord.gg/9wRCptxC6u for assistance"
-
-game.Players.PlayerAdded:Connect(function(player)
-	for i,v in pairs(blacklisted) do
-		if v == player.Name then
-			player:Kick(blacklistReason)
-		end
-	end
+    for i,v in pairs(blacklisted) do
+        if v == player.UserId then
+            player:Kick(blacklistReason)
+        end
+    end
 end)
