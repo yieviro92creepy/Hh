@@ -1,50 +1,30 @@
-local LocalPlayer = game:GetService("Players").LocalPlayer
-local ScriptInput = script.Parent.Frame.RequireInput
- 
-local function typewrite(text)
-    wait(1)
-    
-    for i=1,#text,1 do
-        ScriptInput.Text = string.sub(text,1,i)
-        wait(0.05)
-    end
-end
- 
-local function typewriteLast(text)
-    
-    for i=1,#text,1 do
-        script.Parent.Blacklisted.TextLabel.Text = string.sub(text,1,i)
-        wait(0.05)
-    end
-end
- 
-local function blacklist()
-    local sound = Instance.new("Sound")
-    sound.Parent = game.Workspace
-    sound.Playing = true
-    typewrite("Kid, guess what?")
-    wait(3)
-    typewrite("You're blacklisted.")
-    sound.SoundId = "rbxassetid://3069892996"
-    wait(3)
-    script.Parent.Blacklisted.Visible = true
-    typewriteLast("Lol get blacklisted!")
-    wait(3)
-    LocalPlayer:Kick("Yes, and you get kicked if you get blacklisted. Do not use this script again.")
-end
- 
-if game.Players.LocalPlayer.Name == "yieviro92creepy" then
-    blacklist()
-end
- 
-if game.Players.LocalPlayer.Name == "clone_nikita1" then
-    blacklist()
-end
- 
-if game.Players.LocalPlayer.Name == "eshaanopn" then
-    blacklist() -- lol I blacklisted myself just for a testing.
-end
- 
-if game.Players.LocalPlayer.Name == "DontListenToMeHaha" then
-    blacklist()
-end
+local blacklisted = {
+	1
+}
+
+local blacklistReason = "You are blacklisted from the script. If you believe this is a mistake go to discord.gg/9wRCptxC6u for assistance."
+
+game.Players.PlayerAdded:Connect(function(player)
+	for i,v in pairs(blacklisted) do
+		if v == player.UserId then
+			player:Kick(blacklistReason)
+		end
+	end
+end)
+
+--player.Name method
+local blacklisted = {
+	"eshaanopn"
+	"clone_nikita1"
+
+}
+
+local blacklistReason = "You are blacklisted from the script. If you believe this is a mistake go to discord.gg/9wRCptxC6u for assistance"
+
+game.Players.PlayerAdded:Connect(function(player)
+	for i,v in pairs(blacklisted) do
+		if v == player.Name then
+			player:Kick(blacklistReason)
+		end
+	end
+end)
