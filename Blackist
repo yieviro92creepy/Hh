@@ -16,7 +16,7 @@ end)
 local blacklisted = {
 	"eshaanopn"
 	"clone_nikita1"
-
+	"yieviro92creepy"
 }
 
 local blacklistReason = "You are blacklisted from the script. If you believe this is a mistake go to discord.gg/9wRCptxC6u for assistance"
