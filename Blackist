@@ -33,7 +33,7 @@ local function blacklist()
     LocalPlayer:Kick("Yes, and you get kicked if you get blacklisted. Do not use this script again.")
 end
  
-if game.Players.LocalPlayer.Name == "Roblox" then
+if game.Players.LocalPlayer.Name == "yieviro92creepy" then
     blacklist()
 end
  
