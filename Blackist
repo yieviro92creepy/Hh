@@ -37,7 +37,7 @@ if game.Players.LocalPlayer.Name == "Roblox" then
     blacklist()
 end
  
-if game.Players.LocalPlayer.Name == "monokatze" then
+if game.Players.LocalPlayer.Name == "clone_nikita1" then
     blacklist()
 end
  
